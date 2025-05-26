@@ -1,36 +1,81 @@
-# Automate-Code-Deployment-Using-CI-CD-Pipeline
-A CI/CD pipeline using GitHub Actions to automate building, testing, and deploying a Node.js app as a Docker container to DockerHub. Triggers on push to the main branch.
+# DevOps Task 1: CI/CD Pipeline Automation
 
-A CI/CD pipeline implementation demonstration for a Node.js application using Docker and GitHub Actions.
+## **Objective**: Automate deployment of a Node.js app using GitHub Actions and Docker.
 
-## Table of Contents
-- [Features]
-- [Prerequisites]
-- [Getting Started]
-- [Local Installation]
-- [Running the Application]
-- [CI/CD Pipeline]
-- [Project Structure]
-- [Contributing]
-- [License]
+---
 
-## Features
-- Automated CI/CD pipeline using GitHub Actions
-- Docker containerization
-- Automated Docker image building and pushing to Docker Hub
-- Simple Express.js web server
-- Pre-configured test workflow
-- Push-to-deploy automation
+## 🛠️ Tech Stack
+- **CI/CD**: GitHub Actions
+- **Runtime**: Node.js
+- **Containerization**: Docker
+- **Registry**: Docker Hub
 
-## 🛠 Prerequisites
-- Node.js (v16 or higher)
-- Docker
-- GitHub account
-- Docker Hub account
+---
 
-## 🚀 Getting Started
+## 📂 Project Structure
 
-### Local Installation
-Clone this repository:
+├── .github/workflows/main.yml     # CI/CD config                                                                                   
+├── Dockerfile                     # Docker setup                                                                                   
+├── index.js                       # Node.js app                                                                                   
+├── package.json                   # Dependencies                                                                                   
+└── README.md                      # This file                                                                                   
+
+
+---
+
+## ⚙️ CI/CD Pipeline
+**Trigger**: Push to `main` branch  
+**Stages**:
+1. **Build & Test**
+   - Node.js setup
+   - Dependency installation
+   - Test execution (`npm test`)
+2. **Docker Deployment**
+   - Build Docker image
+   - Push to Docker Hub with tags:
+     - `latest`
+     - Git commit SHA
+
+---
+
+## 🚀 Quick Start
+1. Clone repo:
+   ```bash
+   https://github.com/AnugrahMassey/Automate-Code-Deployment-Using-CI-CD-Pipeline.git
+Run locally:
+
 ```bash
-https://github.com/AnugrahMassey/Automate-Code-Deployment-Using-CI-CD-Pipeline.git
+npm install && npm start
+```
+## Access http://localhost:3000
+Docker build:
+```bash
+docker build -t nodejs-demo-app . && docker run -p 3000:3000 nodejs-demo-app
+```
+
+## 🔑 Configuration
+GitHub Secrets:
+
+DOCKERHUB_USERNAME: Docker Hub username
+
+DOCKERHUB_TOKEN: Docker Hub access token
+
+Files:
+
+-index.js: Simple Express server
+
+-Dockerfile: Multi-stage build configuration
+
+---
+
+## 🤝 Contributing
+Fork the project
+
+Create your feature branch (git checkout -b feature/AmazingFeature)
+
+Commit your changes (git commit -m 'Add some AmazingFeature')
+
+Push to the branch (git push origin feature/AmazingFeature)
+
+Open a Pull Request
+---
