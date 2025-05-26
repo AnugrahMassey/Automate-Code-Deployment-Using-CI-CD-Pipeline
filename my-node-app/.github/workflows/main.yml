@@ -1,4 +1,4 @@
-https://github.com/AnugrahMassey/Automate-Code-Deployment-Using-CI-CD-Pipeline.gitname: CI/CD Pipeline for Node.js App
+name: CI/CD Pipeline for Node.js App
 
 on:
   push:
