@@ -1,0 +1,20 @@
+{
+  "name": "automate-code-deployment-using-ci-cd-pipeline",
+  "version": "1.0.0",
+  "description": "A CI/CD pipeline using GitHub Actions to automate building, testing, and deploying a Node.js app as a Docker container to DockerHub. Triggers on push to the main branch.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnugrahMassey/Automate-Code-Deployment-Using-CI-CD-Pipeline.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnugrahMassey/Automate-Code-Deployment-Using-CI-CD-Pipeline/issues"
+  },
+  "homepage": "https://github.com/AnugrahMassey/Automate-Code-Deployment-Using-CI-CD-Pipeline#readme"
+}
